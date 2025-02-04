@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,15 +20,15 @@ html::-webkit-scrollbar-thumb {
 }
 /* custom scroll bar */
 :root {
-  --main-color:#ff2c1f;
-  --text-color:#020307;
-  --bg-color:#fff;
+  --main-color: #ff2c1f;
+  --text-color: #020307;
+  --bg-color: #fff;
 }
 section {
   padding: 4.5rem 1.5rem;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: var(--text-color);
   color: var(--bg-color);
 }
@@ -53,7 +53,7 @@ header.shadow {
 header.shadow .navbar a {
   color: var(--text-color);
 }
-header.shadow .logo  {
+header.shadow .logo {
   color: var(--text-color);
 }
 header .logo {
@@ -80,8 +80,8 @@ header .navbar {
   font-size: 1rem;
   color: var(--main-color);
 }
-.navbar a::after{
-  content: '';
+.navbar a::after {
+  content: "";
   position: absolute;
   background-color: var(--main-color);
   width: 0;
@@ -119,35 +119,37 @@ header .btn {
   background-position: center;
   background-size: cover;
   position: relative;
-}
 
-.home .home-text {
-  position: absolute;
-  top: 40%;
-  padding-left: 80px;
+  .home-text {
+    position: absolute;
+    top: 40%;
+    padding-left: 80px;
+
+    span {
+      font-weight: 500;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--bg-color);
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background-color: var(--main-color);
+      color: var(--bg-color);
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.5rem;
+      font-weight: 400;
+      &:hover {
+        background: #fa1216;
+      }
+    }
+  }
 }
-.home-text span {
-  font-weight: 500;
-  color: #000;
-  text-transform: uppercase;
-}
-.home-text h2 {
-  color: var(--bg-color);
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.home-text .btn {
-  background-color: var(--main-color);
-  color: var(--bg-color);
-  padding: 0.7rem 1.4rem;
-  border-radius: 0.5rem;
-  font-weight: 400;
-}
-.btn:hover {
-  background: #fa1216;
-}
-/* Home */
 
 /* Movies */
 .heading {
@@ -159,36 +161,43 @@ header .btn {
   margin-left: auto;
   margin-right: auto;
 }
+
 .movies-container {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px,auto));
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
   gap: 1rem;
   margin-top: 2rem;
 }
-.box .box-img {
-  width: 100%;
-  height: 270px;
-}
-.box-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-  transition: 0.2s all linear;
-}
-.box-img img:hover {
-  transform:translateY(-10px);
-}
-.box h3 {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--main-color);
-}
-.box span {
-  font-size: 13px;
+
+.box {
+  .box-img {
+    width: 100%;
+    height: 270px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: 0.2s all linear;
+      img:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--main-color);
+  }
+
+  span {
+    font-size: 13px;
+  }
 }
 /* Movies */
 /* Coming Soon */
@@ -198,7 +207,7 @@ header .btn {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px,auto));
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -214,11 +223,11 @@ header .btn {
   align-items: center;
   justify-content: center;
   row-gap: 2rem;
-}
-.news h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-align: center;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
 }
 .news form {
   display: flex;
@@ -226,31 +235,36 @@ header .btn {
   padding: 10px;
   background-color: var(--bg-color);
   border-radius: 0.5rem;
+
+  input[type="email"] {
+    border: 0;
+    outline: 0;
+    width: 300px;
+
+    &::placeholder {
+      color: var(--text-color);
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+
+  .btn {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.7rem 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #fa1216;
+    }
+  }
 }
-.news form input[type="email"] {
-  border: 0;
-  outline: 0;
-  width: 300px;
-}
-.news input::placeholder {
-  color: var(--text-color);
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-.news .btn {
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  background-color: var(--main-color);
-  color: var(--bg-color);
-  padding: 0.7rem 1.4rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.btn:hover {
-  background: #fa1216;
-}
+
 /* news */
 /* footer */
 .footer {
@@ -287,7 +301,7 @@ header .btn {
   line-height: 55px;
   background-color: var(--bg-color);
   color: var(--main-color);
-  border: 4px solid rgb(2, 3, 7, 0.4) ;
+  border: 4px solid rgb(2, 3, 7, 0.4);
   transition: 0.2s all linear;
 }
 .social-icons a:hover {
@@ -308,16 +322,16 @@ header .btn {
 /* copy */
 
 /* Resbonsive */
-@media (max-width:1080px) {
+@media (max-width: 1080px) {
   .home-text {
     padding: 0 100px;
   }
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
   header {
     padding: 18px 4%;
   }
-  section{
+  section {
     padding: 50px 4%;
   }
   .home-text {
@@ -327,7 +341,7 @@ header .btn {
     font-size: 3rem;
   }
 }
-@media (max-width:774px) {
+@media (max-width: 774px) {
   header {
     padding: 12px 4%;
   }
@@ -373,7 +387,7 @@ header .btn {
   }
   .movies-container,
   .coming-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px ,auto));
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
   }
 }
 @media (max-width: 472px) {
@@ -382,7 +396,7 @@ header .btn {
     align-items: center;
     row-gap: 1rem;
   }
-  .news form  .email {
+  .news form .email {
     display: none;
   }
 }
@@ -395,7 +409,7 @@ header .btn {
   }
   .movies-container,
   .coming-container {
-    grid-template-columns: repeat(auto-fit, minmax(140px ,auto));
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
   }
   .box .box-img img {
     height: 240px;
