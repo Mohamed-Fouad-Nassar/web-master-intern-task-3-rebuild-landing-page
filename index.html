@@ -67,9 +67,9 @@
       @layer utilities {
         @media (max-width: 768px) {
           .only-sm {
-            @apply hidden p-5 absolute top-20 bg-white right-0 left-0 flex-col justify-start shadow-sm transition duration-500;
+            @apply flex p-5 absolute top-20 bg-white right-0 left-0 flex-col justify-start shadow-sm opacity-0 invisible;
             &.active {
-              @apply flex;
+              @apply opacity-100 visible;
             }
           }
         }
@@ -87,7 +87,10 @@
           <i class="fa-solid fa-bars"></i>
         </button>
         <!-- menu -->
-        <ul id="navbar" class="only-sm md:flex items-center gap-10 text-main">
+        <ul
+          id="navbar"
+          class="only-sm md:flex items-center gap-10 text-main transition duration-500"
+        >
           <li class="relative">
             <a
               class="font-medium after:transition-all after:duration-300 after:absolute after:bg-main after:w-full after:h-[2px] after:left-0 after:-bottom-1 hover:after:w-full"

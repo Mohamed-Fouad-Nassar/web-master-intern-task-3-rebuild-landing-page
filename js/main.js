@@ -26,6 +26,9 @@ let navbar = document.querySelector("#navbar");
 
 menuIcon.onclick = () => {
   navbar.classList.toggle("active");
+  if (window.scrollY === 0) {
+    header.classList.toggle("shadow");
+  }
 };
 window.onscroll = () => {
   navbar.classList.remove("active");
